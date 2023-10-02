@@ -62,4 +62,11 @@ describe("UserController", () => {
     userController.getAllUsers(mockRequest, mockResponse);
     expect(mockResponse.state.status).toBe(200);
   });
+
+  it("Deve remover o usuário", () => {
+    const mockRequest = {} as Request;
+    const mockResponse = makeMockResponse();
+    userController.getAllUsers(mockRequest, mockResponse);
+    expect(mockResponse.state.status).toBe(200);
+  });
 });

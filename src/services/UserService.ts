@@ -17,6 +17,10 @@ export class UserService {
     this.db = database;
   }
 
+  getAllUsers = () => {
+    return this.db;
+  };
+
   createUser = (name: string, email: string) => {
     const user = {
       name,
@@ -25,9 +29,5 @@ export class UserService {
 
     this.db.push(user);
     console.log("DB atualizado", this.db);
-  };
-
-  getAllUsers = () => {
-    return this.db;
   };
 }
